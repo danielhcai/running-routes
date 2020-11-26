@@ -1,0 +1,35 @@
+{
+  "name": "running-routes",
+  "version": "1.0.0",
+  "description": "Application to generate running routes",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress --config webpack.config.js",
+    "dev-build": "webpack --progress --config webpack.config.js",
+    "watch": "webpack --progress --config webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielhcai/running-routes.git"
+  },
+  "author": "Daniel Cai",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
