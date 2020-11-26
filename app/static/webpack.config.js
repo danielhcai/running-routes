@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
+	watch: true,
 	entry: {
-		index: './scripts/index.js',
-		error: './scripts/error.js'		
+		index: './scripts/app/index.js',
+		error: './scripts/error/index.js'		
 	},
 	output: {
 		filename: '[name].bundle.js',
@@ -18,6 +19,10 @@ module.exports = {
 				test: /\.(js|jsx)?/,
                 exclude:/(node_modules)/,
                 loader: 'babel-loader'
+			},
+			{
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader']
 			}
 		]
 	}
