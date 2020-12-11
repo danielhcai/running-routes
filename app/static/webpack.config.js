@@ -1,4 +1,6 @@
+const webpack = require('webpack');
 const path = require('path');
+const dotenv = require('dotenv').config()
 
 module.exports = {
 	watch: true,
@@ -25,5 +27,10 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			}
 		]
-	}
+	},
+	plugins: [
+		new webpack.DefinePlugin({
+		  "process.env": JSON.stringify(dotenv.parsed)
+		}),
+	],
 };

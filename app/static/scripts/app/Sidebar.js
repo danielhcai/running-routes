@@ -1,15 +1,19 @@
 import React from 'react'
+import SidebarItem from './SidebarItem'
 
 function Sidebar() {
 	return (
-		<div className="sidebar">
-			<a href="#"> Test1 </a>
-			<a href="#"> Test2 </a>
-			<a href="#"> Test3 </a>
-			<a href="#"> Test4 </a>
-		</div>
+		<nav>
+			<div>
+				<ul>
+					<SidebarItem name="Test"/>
+					<SidebarItem name="Test"/>
+					<SidebarItem name="Test"/>
+					<SidebarItem name="Test"/>
+				</ul>
+			</div>
+		</nav>
 	)
 }
-
 
 export default Sidebar

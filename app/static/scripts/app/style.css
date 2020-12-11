@@ -1,24 +1,20 @@
-
 .sidebar {
 	height: 100%;
-	width: 200px;
+	width: 30%;
+	max-width: 250px;
 	position: fixed;
-	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
+	background-color: #dcdee0;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	padding-top: 20px;
 }
 
 .sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-
-.route-map {
-	margin-left: 160px;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #616161;
+	display: block;
 }

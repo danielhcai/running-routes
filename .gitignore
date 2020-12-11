@@ -14,4 +14,5 @@ build/
 *.egg-info/
 
 .flaskenv
+.env
 node_modules/
