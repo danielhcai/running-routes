@@ -1,25 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import Sidebar from './Sidebar'
-import RouteMap from './RouteMap'
-import './style.css'
+import Map from './Map'
 
 function App() {
-	const [collapsed, setCollapsed] = useState(false)
-	const [width, setWidth] = useState(0)
-	const [height, setHeight] = useState(0)
-
-	useEffect (() => {
-		setWidth(window.innerWidth)
-		setWidth(window.innerHeight)
-	})
-	
 	return (
-		<div className="container-fluid">
-			<div className="row">
-				<RouteMap />
-			</div>
+		<div id="map-container">
+			<Map />
 		</div>
-	);
+	)
 }
 
 export default App
