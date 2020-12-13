@@ -1,13 +1,31 @@
-import React, {useState, useEffect} from 'react'
-import Sidebar from './Sidebar'
-import Map from './Map'
+import React, {useState, useEffect, Component} from 'react'
+import Navbar from './Navbar.js'
+import Map from './Map.js'
 
-function App() {
-	return (
-		<div id="map-container">
-			<Map />
-		</div>
-	)
+class App extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			mode: 0
+		}
+
+		this.changeMode = this.changeMode.bind(this)
+	}
+	
+	changeMode(event) {
+		this.setState({
+			mode: parseInt(event.target.attributes[3].value)
+		})
+	}
+
+	render(){
+		return (
+			<div id="map-container">
+				<Navbar changeMode={this.changeMode}/>
+				<Map mode={this.state.mode}/>
+			</div>
+		)
+	}
 }
 
 export default App

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from'./Marker'
+import Marker from'./Marker.js'
 
 const center = {lat: 29.7604, lng: -95.3698}
 const zoom = 11
@@ -11,31 +11,21 @@ class Map extends Component {
 
         this.state = {
             markerCoordinates: [],
-            zoom: zoom
         }
-
         this.handleClick = this.handleClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
 
     handleClick (event) {
-        this.setState(function(state, props) {
-            let oldCoordinates = state.markerCoordinates
-            oldCoordinates.push({lat: event.lat, lng: event.lng})
-            return {
-                markerCoordinates: oldCoordinates,
-                zoom: state.zoom
-            }
-        })
-    }
-
-    handleChange (event){
-        this.setState(function(state, props) {
-            return {
-                markerCoordinates: state.markerCoordinates,
-                zoom: event.zoom
-            }
-        })
+        if(this.props.mode == 1){
+            this.setState(function(state, props) {
+                let oldCoordinates = state.markerCoordinates
+                oldCoordinates.push({lat: event.lat, lng: event.lng})
+                return {
+                    markerCoordinates: oldCoordinates,
+                }
+            })
+        }
     }
 
     render() {
